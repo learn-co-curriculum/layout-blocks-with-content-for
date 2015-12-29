@@ -8,7 +8,7 @@
 ## Outline
 
 Our HTML needs to be logically grouped in order of the document. For example, our main layout must follow this order of HTML
-
+```
 <head>
   <meta tags>
 </head>
@@ -25,9 +25,10 @@ Our HTML needs to be logically grouped in order of the document. For example, ou
     <%= yield # to view content %>
   </div>
 </body>
-
+```
 which might generate something like:
 
+```
 <head>
   <meta tags>
 </head>
@@ -46,11 +47,13 @@ which might generate something like:
     <p>Product 1 description</p>
   </div>
 </body>
+```
 
 This works fine as the content that is view specific, the information about product 1, is entirely contained within the main layout. It goes all inside the div.main.
 
 But if we needed to put content related to product 1, view specific content that we only have access to on the view and not the layout in some other part of the layout? for example, facebook requires you to embed opengraph meta tags within the head of the document. what if we wanted to put opengraph tags about product 1? our layout would have to look like, conceptually
 
+```
 <head>
   <!-- Product Specific Information -->
   <meta property="og:type" content="product" />
@@ -75,6 +78,7 @@ But if we needed to put content related to product 1, view specific content that
     <p>Product 1 description</p>
   </div>
 </body>
+```
 
 As you can see now two entirely different parts of our final html need product information, some in the head, some in the main div. The layout never knows about which product we're dealing with, only the view can appropriately query @product.
 
