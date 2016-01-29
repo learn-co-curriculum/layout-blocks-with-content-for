@@ -93,3 +93,5 @@ Show patterns like content_for?
 explain that we do this often to get view-specific content in different parts of the layout, like sub navigations etc.
 
 content_for :content_block gets paired with yield :content_block
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/layout-blocks-with-content-for' title='Layout Blocks With Content For'>Layout Blocks With Content For</a> on Learn.co and start learning to code for free.</p>
